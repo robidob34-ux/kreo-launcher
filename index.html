@@ -437,7 +437,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
           <span id="dlLabel">Download for Windows</span>
         </button>
         <p class="micro" style="margin:14px 0 6px">SHA-256 checksum — verify your download:</p>
-        <div class="hash-row"><code id="shaHash">run make_release.sh to embed SHA-256</code><button class="copy-btn" id="copyHash">COPY</button></div>
+        <div class="hash-row"><code id="shaHash">82b56963b4bb79fd97aa15b91a8599cdc147fb1dbcc44ce5a96995f8de66ef41</code><button class="copy-btn" id="copyHash">COPY</button></div>
       </div>
     </div>
   </div>
@@ -699,9 +699,9 @@ faqWrap.addEventListener('click', e => {
    make_release.sh with your real build rewrites 'hash' + 'size' below. */
 const RELEASE_BASE = 'https://github.com/robidob34-ux/kreo-launcher/releases/latest/download/';
 const OS_OPTIONS = [
-  { id:'windows', label:'Windows', size:'see release page', file:'KreoLauncher-Setup-2.4.1.exe', hash:'' },
-  { id:'macos',   label:'macOS',   size:'see release page', file:'KreoLauncher-2.4.1.dmg',       hash:'' },
-  { id:'linux',   label:'Linux',   size:'see release page', file:'KreoLauncher-2.4.1.AppImage',  hash:'' }
+  { id:'windows', label:'Windows', size:'73.9 MB', file:'KreoLauncher-Setup-2.4.1.exe', hash:'82b56963b4bb79fd97aa15b91a8599cdc147fb1dbcc44ce5a96995f8de66ef41', available:true  },
+  { id:'macos',   label:'macOS',   size:'coming soon', file:'', hash:'', available:false },
+  { id:'linux',   label:'Linux',   size:'coming soon', file:'', hash:'', available:false }
 ];
 const osTabs = document.getElementById('osTabs');
 const dlLabel = document.getElementById('dlLabel');
@@ -720,11 +720,13 @@ function selectOS(id){
   osTabs.querySelectorAll('.os-btn').forEach(b => { const on = b.dataset.os === currentOS.id; b.classList.toggle('active', on); b.setAttribute('aria-selected', String(on)); });
   dlLabel.textContent = 'Download for ' + currentOS.label;
   dlSize.textContent = currentOS.size;
-  shaHash.textContent = currentOS.hash || 'Checksum shown after first release is packed (make_release.sh)';
+  shaHash.textContent = currentOS.hash || 'SHA-256 published on the GitHub Release page';
 }
 osTabs.addEventListener('click', e => { const b = e.target.closest('.os-btn'); if (b) selectOS(b.dataset.os); });
+selectOS('windows');  /* sync checksum + label on page load */
 document.getElementById('dlButton').addEventListener('click', () => {
-  showToast('Downloading ' + currentOS.file + ' from GitHub Releases…');
+  if (!currentOS.available) { showToast(currentOS.label + ' build coming soon — Windows only in v2.4.1 for now'); return; }
+  showToast('Downloading ' + currentOS.file + ' (73.9 MB)…');
   window.location.assign(RELEASE_BASE + currentOS.file);
 });
 document.getElementById('copyHash').addEventListener('click', async () => {
@@ -817,6 +819,5 @@ nlForm.addEventListener('submit', e => {
 const track = document.getElementById('marqueeTrack');
 track.innerHTML += track.innerHTML;
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a59ef9540828311c',t:'MTc5NDU4NTQ2NA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a59ef9540828311c',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
