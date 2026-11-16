@@ -64,6 +64,8 @@ h1,h2,h3,.display{font-family:"Inter","Segoe UI",system-ui,sans-serif;letter-spa
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px rgba(91,140,255,.55),inset 0 1px 0 rgba(255,255,255,.5)}
 .btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--stroke-bright);color:var(--cyan);padding:12px 22px;font-size:.92rem}
 .btn-ghost:hover{background:rgba(55,224,255,.12);transform:translateY(-2px)}
+.btn-discord{background:#5865F2;color:#fff;padding:12px 22px;font-size:.92rem;box-shadow:0 10px 28px rgba(88,101,242,.4),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-discord:hover{background:#4752c4;transform:translateY(-2px);box-shadow:0 14px 36px rgba(88,101,242,.5),inset 0 1px 0 rgba(255,255,255,.35)}
 .btn-sm{padding:9px 18px;font-size:.85rem;border-radius:10px}
 .hamburger{display:none;background:none;border:1px solid var(--stroke);border-radius:10px;color:var(--text);width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
 .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:rgba(6,12,28,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--stroke);padding:18px 20px 26px}
@@ -270,6 +272,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
       <li><a href="#features">Features</a></li>
       <li><a href="#mods">Mods</a></li>
       <li><a href="./mods.html">Mod Browser</a></li>
+      <li><a href="https://discord.gg/SsS34cPYd" target="_blank" rel="noopener">Discord</a></li>
       <li><a href="#download">Download</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -286,6 +289,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
   <a href="#features">Features</a>
   <a href="#mods">Mods</a>
   <a href="./mods.html">Mod Browser</a>
+  <a href="https://discord.gg/SsS34cPYd" target="_blank" rel="noopener">Discord ↗</a>
   <a href="#download">Download</a>
   <a href="#faq">FAQ</a>
   <a href="#newsletter">Release notes</a>
@@ -296,7 +300,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
   <div class="sky"></div>
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow"><span class="dot"></span> v2.4.1 — Aurora Update is live</div>
+      <div class="eyebrow"><span class="dot"></span> v2.5.0 is live</div>
       <h1 class="hero-title">The Next-Gen<br /><span class="grad-text">Minecraft Client.</span></h1>
       <p class="hero-sub">Kreo Launcher fuses <strong>lunar-grade performance</strong> with <strong>feather-smooth design</strong> — <strong>140+ built-in mods</strong>, ultra-low latency networking and smart RAM allocation that makes your PC fly. Free forever. No nonsense.</p>
       <div class="cta-row">
@@ -304,6 +308,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Kreo — Free
         </a>
+        <a href="https://discord.gg/SsS34cPYd" target="_blank" rel="noopener" class="btn btn-discord"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18 18 0 0 0-5.5 0C9.1 3.9 8.8 3.4 8.6 3a19.7 19.7 0 0 0-4.9 1.5C.9 9.3.2 14.1.6 18.8a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2a12.6 12.6 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.1 0l.5.4a12.6 12.6 0 0 1-2 1c.4.7.8 1.4 1.3 2a19.9 19.9 0 0 0 6-3c.5-5.4-.8-10.2-3.6-14.4zM9.7 15.3c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-1 2.4-2.1 2.4zm4.6 0c-1.2 0-2.1-1.1-2.1-2.4s1-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4z"/></svg>Join our Discord</a>
         <a href="#features" class="btn btn-ghost">Explore features
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
@@ -322,7 +327,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
       <div class="launcher" id="launcherMock">
         <div class="titlebar">
           <div class="tl-dot r"></div><div class="tl-dot y"></div><div class="tl-dot g"></div>
-          <span>KREO LAUNCHER v2.4.1</span>
+          <span>KREO LAUNCHER v2.5.0</span>
         </div>
         <div class="launcher-body">
           <aside class="lside">
@@ -436,9 +441,9 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
         <h3 style="font-size:1.3rem">Choose your platform</h3>
         <div class="os-tabs" id="osTabs" role="tablist"></div>
         <div class="dl-meta">
-          <div><span>Version</span><b>v2.4.1 "Aurora"</b></div>
+          <div><span>Version</span><b>v2.5.0</b></div>
           <div><span>Released</span><b>Nov 2026</b></div>
-          <div><span>File size</span><b id="dlSize">74 MB</b></div>
+          <div><span>File size</span><b id="dlSize">74.0 MB</b></div>
           <div><span>License</span><b>Freeware</b></div>
         </div>
         <button class="btn btn-primary" id="dlButton" style="justify-content:center;font-size:1.02rem;padding:16px">
@@ -446,7 +451,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
           <span id="dlLabel">Download for Windows</span>
         </button>
         <p class="micro" style="margin:14px 0 6px">SHA-256 checksum — verify your download:</p>
-        <div class="hash-row"><code id="shaHash">82b56963b4bb79fd97aa15b91a8599cdc147fb1dbcc44ce5a96995f8de66ef41</code><button class="copy-btn" id="copyHash">COPY</button></div>
+        <div class="hash-row"><code id="shaHash">4c654df62089d8f71f51a32d10324900e06f1c1c7c59f7aea9ed573ab0efb8eb</code><button class="copy-btn" id="copyHash">COPY</button></div>
       </div>
     </div>
   </div>
@@ -506,7 +511,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
       </div>
       <div>
         <h4>Community</h4>
-        <a href="#">Discord Server</a>
+        <a href="https://discord.gg/SsS34cPYd" target="_blank" rel="noopener">Discord Server</a>
         <a href="#">Server Partnerships</a>
         <a href="#">Cosmetics &amp; Capes</a>
         <a href="#">Creator Program</a>
@@ -522,7 +527,7 @@ footer{border-top:1px solid var(--stroke);background:var(--bg-2);padding:64px 0 
     <p class="disclaimer">Kreo Launcher is an independent, fan-made project. It is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Synergies AB. Downloading Kreo does not include or bypass any Minecraft ownership; you need a legitimate copy of the game.</p>
     <div class="foot-bottom">
       <span>© 2026 Kreo Project. All rights reserved.</span>
-      <span>Made for the Minecraft community · v2.4.1 “Aurora”</span>
+      <span>Made for the Minecraft community · v2.5.0</span>
     </div>
   </div>
 </footer>
@@ -683,7 +688,7 @@ const FAQS = [
   ['Is Kreo Launcher really free?','Yes — 100%. No subscription, no cosmetic paywalls, no premium tier. Kreo is free forever, supported by optional donations and server partnerships.'],
   ['Which Minecraft versions are supported?','Java Edition 1.8.9 (PvP classic) through 1.21.4, with snapshots for Kreo Nightly subscribers. Bedrock is not supported.'],
   ['Will I get banned for using Kreo?','Kreo is a legitimate client: no kill-aura, no reach hacks, no baritone. It complies with vanilla protocol rules, and most major anarchy and PvP servers allow it. Always check your server\'s rules page.'],
-  ['How is Kreo different from Lunar or Feather?','Kreo mixes their best DNA — Feather\'s clean design with Lunar\'s deep performance stack — plus exclusive cosmetics and a full instance manager, wrapped in a launcher that weighs 74 MB.'],
+  ['How is Kreo different from Lunar or Feather?','Kreo mixes their best DNA — Feather\'s clean design with Lunar\'s deep performance stack — plus exclusive cosmetics and a full instance manager, wrapped in a launcher that weighs 74.0 MB.'],
   ['Can I use Kreo on a low-end laptop?','Absolutely. Smart RAM Allocation and the FPS Boost Engine are built for 4 GB machines. Integrated GPUs are supported (OpenGL 4.5+).'],
   ['Where are my profiles stored?','Locally under ~/.kreo, with optional cloud sync for keybinds, profiles and cosmetic unlocks when you sign in.']
 ];
@@ -709,7 +714,7 @@ faqWrap.addEventListener('click', e => {
    make_release.sh with your real build rewrites 'hash' + 'size' below. */
 const RELEASE_BASE = 'https://github.com/robidob34-ux/kreo-launcher/releases/latest/download/';
 const OS_OPTIONS = [
-  { id:'windows', label:'Windows', size:'73.9 MB', file:'KreoLauncher-Setup-2.4.1.exe', hash:'82b56963b4bb79fd97aa15b91a8599cdc147fb1dbcc44ce5a96995f8de66ef41', available:true  },
+  { id:'windows', label:'Windows', size:'74.0 MB', file:'KreoLauncher.exe', hash:'4c654df62089d8f71f51a32d10324900e06f1c1c7c59f7aea9ed573ab0efb8eb', available:true  },
   { id:'macos',   label:'macOS',   size:'coming soon', file:'', hash:'', available:false },
   { id:'linux',   label:'Linux',   size:'coming soon', file:'', hash:'', available:false }
 ];
@@ -735,7 +740,7 @@ function selectOS(id){
 osTabs.addEventListener('click', e => { const b = e.target.closest('.os-btn'); if (b) selectOS(b.dataset.os); });
 selectOS('windows');  /* sync checksum + label on page load */
 document.getElementById('dlButton').addEventListener('click', () => {
-  if (!currentOS.available) { showToast(currentOS.label + ' build coming soon — Windows only in v2.4.1 for now'); return; }
+  if (!currentOS.available) { showToast(currentOS.label + ' build coming soon — Windows only in v2.5.0 for now'); return; }
   showToast('Downloading ' + currentOS.file + ' (73.9 MB)…');
   window.location.assign(RELEASE_BASE + currentOS.file);
 });
@@ -758,7 +763,7 @@ const QUICK_MODS = [
 ];
 const modToggleList = document.getElementById('modToggleList');
 modToggleList.innerHTML = QUICK_MODS.map(([name, state]) => `
-  <div class="mod-item"><span><b>${name}</b><span>Built-in · v2.4.1</span></span><button class="toggle${state==='on'?' on':''}" role="switch" aria-checked="${state==='on'}" aria-label="Toggle ${name}"></button></div>`).join('');
+  <div class="mod-item"><span><b>${name}</b><span>Built-in · v2.5.0</span></span><button class="toggle${state==='on'?' on':''}" role="switch" aria-checked="${state==='on'}" aria-label="Toggle ${name}"></button></div>`).join('');
 modToggleList.addEventListener('click', e => {
   const t = e.target.closest('.toggle');
   if (!t) return;
